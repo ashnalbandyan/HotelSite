@@ -1,0 +1,52 @@
+﻿@model HotelSite.Models.OrderRoom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderRoom</h4>
+    <hr />
+    <dl>
+        <dt class="esim">
+            @Html.DisplayNameFor(model => model.RoomType)
+        </dt>
+
+        <dd class="esim">
+            @Html.DisplayFor(model => model.RoomType)
+        </dd>
+        <br />
+        <dt class="esim">
+            @Html.DisplayNameFor(model => model.RoomsCount)
+        </dt>
+
+        <dd class="esim">
+            @Html.DisplayFor(model => model.RoomsCount)
+        </dd>
+        <br />
+
+        <dt class="esim">
+            @Html.DisplayNameFor(model => model.GuestsCount)
+        </dt>
+
+        <dd class="esim">
+            @Html.DisplayFor(model => model.GuestsCount)
+        </dd>
+        <br />
+
+        <dt class="esim">
+            @Html.DisplayNameFor(model => model.Result)
+        </dt>
+
+        <dd class="esim">
+            @Html.DisplayFor(model => model.Result)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

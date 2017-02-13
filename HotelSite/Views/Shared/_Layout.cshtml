@@ -1,0 +1,61 @@
+﻿@using HotelSite.Attributes
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/demo.css" rel="stylesheet" />
+    <link href="~/Content/component.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/modernizr.custom.25376.js"></script>
+</head>
+<body>
+    <div class="main_container">
+        <div id="perspective" class="perspective effect-rotatetop">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="main clearfix">
+                        <div class="column">
+                            <p><button id="showMenu">Show Menu</button></p>
+
+                        </div>
+                        <div class="column">
+                            <nav class="codrops-demos ">
+                                @Html.Partial("_LoginPartial")
+                                @Html.LanguageSelectorLink("en", "English", "English", null)
+                                @Html.LanguageSelectorLink("hy", "Հայերեն", "Հայերեն", null)
+                            </nav>
+                        </div>
+                        <div class="column" style="width:100%;text-align:center;color:white;">
+
+                            @RenderBody()
+                        </div>
+                    </div><!-- /main -->
+                </div><!-- wrapper -->
+            </div><!-- /container -->
+            <nav class="outer-nav bottom horizontal">
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Home", "Index", "Home")
+                @Html.ActionLink("About", "About", "Home")
+                @Html.ActionLink("Contact", "Contact", "Home")
+                @Html.ActionLink("Rooms", "Index", "Rooms")
+                @Html.ActionLink("Order Rooms", "Index", "OrderRooms")
+            </nav>
+        </div> <!-- /perspective -->
+
+     
+        
+    </div>
+    <script src="~/Scripts/classie.js"></script>
+    <script src="~/Scripts/menu.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/Script.js"></script>
+
+
+</body>
+</html>
