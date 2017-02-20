@@ -165,7 +165,6 @@ C:\Users\ashot.nalbandyan\Source\Repos\HotelSite\HotelSite\bin\Microsoft.Owin.Se
 C:\Users\ashot.nalbandyan\Source\Repos\HotelSite\HotelSite\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\ashot.nalbandyan\Source\Repos\HotelSite\HotelSite\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\ashot.nalbandyan\Source\Repos\HotelSite\HotelSite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\ashot.nalbandyan\Source\Repos\HotelSite\HotelSite\obj\Debug\HotelSite.csprojResolveAssemblyReference.cache
 C:\Users\ashot.nalbandyan\Source\Repos\HotelSite\HotelSite\obj\Debug\HotelSite.Resources.Home.resources
 C:\Users\ashot.nalbandyan\Source\Repos\HotelSite\HotelSite\obj\Debug\HotelSite.Resources.Home.hy.resources
 C:\Users\ashot.nalbandyan\Source\Repos\HotelSite\HotelSite\obj\Debug\HotelSite.csproj.GenerateResource.Cache

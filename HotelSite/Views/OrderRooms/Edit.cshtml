@@ -1,7 +1,7 @@
 ﻿@model HotelSite.Models.OrderRoom
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = HotelSite.Resources.Home.Edit;
 }
 
 <h2>Edit</h2>
@@ -50,7 +50,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index",null, new { @class = "anchor_tag" })
+    @Html.ActionLink(HotelSite.Resources.Home.BackToList, "Index",null, new { @class = "anchor_tag" })
 </div>
 
 @section Scripts {

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/normalize.css" rel="stylesheet" />
@@ -19,7 +19,7 @@
                 <div class="wrapper">
                     <div class="main clearfix">
                         <div class="column">
-                            <p><button id="showMenu">Show Menu</button></p>
+                            <p><button id="showMenu">@HotelSite.Resources.Home.Menu</button></p>
 
                         </div>
                         <div class="column">
@@ -37,11 +37,11 @@
                 </div><!-- wrapper -->
             </div><!-- /container -->
             <nav class="outer-nav bottom horizontal">
-                @Html.ActionLink("Home", "Index", "Home", null, new { @class = "anchor_tag" })
-                @Html.ActionLink("About", "About", "Home", null, new { @class = "anchor_tag" })
-                @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "anchor_tag" })
-                @Html.ActionLink("Rooms", "Index", "Rooms", null, new { @class = "anchor_tag" })
-                @Html.ActionLink("Order Rooms", "Index", "OrderRooms", null, new { @class = "anchor_tag" })
+                @Html.ActionLink(HotelSite.Resources.Home.HomeName, "Index", "Home", null, new { @class = "anchor_tag" })
+                @Html.ActionLink(HotelSite.Resources.Home.About, "About", "Home", null, new { @class = "anchor_tag" })
+                @Html.ActionLink(HotelSite.Resources.Home.Contact, "Contact", "Home", null, new { @class = "anchor_tag" })
+                @Html.ActionLink(HotelSite.Resources.Home.Rooms, "Index", "Rooms", null, new { @class = "anchor_tag" })
+                @Html.ActionLink(HotelSite.Resources.Home.OrderRooms, "Index", "OrderRooms", null, new { @class = "anchor_tag" })
             </nav>
         </div> <!-- /perspective -->
 

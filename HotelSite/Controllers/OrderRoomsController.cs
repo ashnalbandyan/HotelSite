@@ -7,9 +7,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using HotelSite.Models;
+using HotelSite.Attributes;
 
 namespace HotelSite.Controllers
 {
+    [Localization]
     public class OrderRoomsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -61,7 +63,7 @@ namespace HotelSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,RoomType,RoomsCount,GuestsCount")] OrderRoom orderRoom)
+        public ActionResult Create([Bind(Include = "Id,RoomType,RoomsCount,GuestsCount,IsReserved")] OrderRoom orderRoom)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +95,7 @@ namespace HotelSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,RoomType,RoomsCount,GuestsCount")] OrderRoom orderRoom)
+        public ActionResult Edit([Bind(Include = "Id,RoomType,RoomsCount,GuestsCount,IsReserved")] OrderRoom orderRoom)
         {
             if (ModelState.IsValid)
             {

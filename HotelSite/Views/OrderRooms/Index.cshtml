@@ -1,46 +1,52 @@
 ﻿@model IEnumerable<HotelSite.Models.OrderRoom>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = HotelSite.Resources.Home.HomeName;
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create",null, new { @class = "anchor_tag" })
+    @Html.ActionLink(HotelSite.Resources.Home.CreateNew, "Create", null, new { @class = "anchor_tag" })
 </p>
-<table class="table">
-    <tr class="padding">
-        <th>
-            @Html.DisplayNameFor(model => model.RoomType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RoomsCount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GuestsCount)
-        </th>
-        <th></th>
-    </tr>
+<div class="table_wrapper">
+    <div class="table_scroll">
+        <table class="table">
+            <thead>
+                <tr class="padding">
+                    <th>
+                        @Html.DisplayNameFor(model => model.RoomType)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RoomsCount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GuestsCount)
+                    </th>
+                    <th>
+                    </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomsCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GuestsCount)
+                </td>
+                <td>
+                    @Html.ActionLink(HotelSite.Resources.Home.Edit, "Edit", new { id = item.Id }, new { @class = "anchor_tag" }) |
+                    @Html.ActionLink(HotelSite.Resources.Home.Details, "Details", new { id = item.Id }, new { @class = "anchor_tag" }) |
+                    @Html.ActionLink(HotelSite.Resources.Home.Delete, "Delete", new { id = item.Id }, new { @class = "anchor_tag" })
+                </td>
+            </tr>
+        }
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoomType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoomsCount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GuestsCount)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "anchor_tag" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "anchor_tag" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "anchor_tag" })
-            </td>
-        </tr>
-    }
-
-</table>
+    </table>
+</div>
+</div>

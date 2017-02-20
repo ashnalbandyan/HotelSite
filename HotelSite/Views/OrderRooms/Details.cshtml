@@ -1,7 +1,7 @@
 ﻿@model HotelSite.Models.OrderRoom
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = HotelSite.Resources.Home.Details;
 }
 
 <h2>Details</h2>
@@ -10,41 +10,49 @@
     <h4>OrderRoom</h4>
     <hr />
     <table class="table">
-        <tr class="padding">
-            <th>
-                @Html.DisplayNameFor(model => model.RoomType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RoomsCount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GuestsCount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Result)
-            </th>
-        </tr>
+        <thead>
+            <tr >
+                <th>
+                    @Html.DisplayNameFor(model => model.RoomType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoomsCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GuestsCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Result)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsReserved)
+                </th>
 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.RoomType)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.RoomsCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.GuestsCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Result)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.IsReserved)
+                </td>
+            </tr>
 
-        <tr>
-            <td>
-                @Html.DisplayFor(model => model.RoomType)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.RoomsCount)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.GuestsCount)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Result)
-            </td>
-        </tr>
-
-
+        </tbody>
     </table>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "anchor_tag" }) |
-    @Html.ActionLink("Back to List", "Index", null, new { @class = "anchor_tag" })
+    @Html.ActionLink(HotelSite.Resources.Home.Edit, "Edit", new { id = Model.Id }, new { @class = "anchor_tag" }) |
+    @Html.ActionLink(HotelSite.Resources.Home.BackToList, "Index", null, new { @class = "anchor_tag" })
 </p>
