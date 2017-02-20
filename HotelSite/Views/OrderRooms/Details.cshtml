@@ -9,44 +9,42 @@
 <div>
     <h4>OrderRoom</h4>
     <hr />
-    <dl>
-        <dt class="esim">
-            @Html.DisplayNameFor(model => model.RoomType)
-        </dt>
+    <table class="table">
+        <tr class="padding">
+            <th>
+                @Html.DisplayNameFor(model => model.RoomType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomsCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GuestsCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result)
+            </th>
+        </tr>
 
-        <dd class="esim">
-            @Html.DisplayFor(model => model.RoomType)
-        </dd>
-        <br />
-        <dt class="esim">
-            @Html.DisplayNameFor(model => model.RoomsCount)
-        </dt>
 
-        <dd class="esim">
-            @Html.DisplayFor(model => model.RoomsCount)
-        </dd>
-        <br />
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.RoomType)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.RoomsCount)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.GuestsCount)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Result)
+            </td>
+        </tr>
 
-        <dt class="esim">
-            @Html.DisplayNameFor(model => model.GuestsCount)
-        </dt>
 
-        <dd class="esim">
-            @Html.DisplayFor(model => model.GuestsCount)
-        </dd>
-        <br />
-
-        <dt class="esim">
-            @Html.DisplayNameFor(model => model.Result)
-        </dt>
-
-        <dd class="esim">
-            @Html.DisplayFor(model => model.Result)
-        </dd>
-
-    </dl>
+    </table>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "anchor_tag" }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "anchor_tag" })
 </p>

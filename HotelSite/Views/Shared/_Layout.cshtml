@@ -37,17 +37,16 @@
                 </div><!-- wrapper -->
             </div><!-- /container -->
             <nav class="outer-nav bottom horizontal">
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Home", "Index", "Home")
-                @Html.ActionLink("About", "About", "Home")
-                @Html.ActionLink("Contact", "Contact", "Home")
-                @Html.ActionLink("Rooms", "Index", "Rooms")
-                @Html.ActionLink("Order Rooms", "Index", "OrderRooms")
+                @Html.ActionLink("Home", "Index", "Home", null, new { @class = "anchor_tag" })
+                @Html.ActionLink("About", "About", "Home", null, new { @class = "anchor_tag" })
+                @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "anchor_tag" })
+                @Html.ActionLink("Rooms", "Index", "Rooms", null, new { @class = "anchor_tag" })
+                @Html.ActionLink("Order Rooms", "Index", "OrderRooms", null, new { @class = "anchor_tag" })
             </nav>
         </div> <!-- /perspective -->
 
-     
-        
+
+
     </div>
     <script src="~/Scripts/classie.js"></script>
     <script src="~/Scripts/menu.js"></script>
